@@ -1,7 +1,13 @@
 import React from 'react';
-import {DefaultTheme, NavigationContainer} from '@react-navigation/native';
+import Main from './screens/Main';
+import Screen from './screens/Login';
+import {
+  DefaultTheme,
+  NavigationContainer,
+  createStackNavigator,
+} from '@react-navigation/native';
 import BottomTabs from './src/elements/BottomTabs';
-
+const Stack = createStackNavigator();
 const App = () => {
   return (
     <NavigationContainer
@@ -13,6 +19,10 @@ const App = () => {
         },
       }}>
       <BottomTabs />
+      <Stack.Navigator>
+        <Stack.Screen name="Main" component={Main} />
+        <Stack.Screen name="Login" component={Screen} />
+      </Stack.Navigator>
     </NavigationContainer>
   );
 };

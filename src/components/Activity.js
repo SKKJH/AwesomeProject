@@ -1,35 +1,29 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 const Activity = () => {
   return (
     <SafeAreaView>
-      <View style={styles.container}>
-        <View style={styles.case1} />
-        <View style={styles.case2} />
-      </View>
+      <View style={styles.case1} />
+      <View style={styles.case2} />
     </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
-  Container: {
-    display: 'flex',
-    height: '100%',
-    alignItems: 'center',
-    justifyContent: 'center',
-    flex: 1,
+  case1: {
+    height: '50%',
+    width: '100%',
     backgroundColor: 'white',
   },
-  case1: {
-    flex: 1,
-    backgroundColor: 'red',
-  },
   case2: {
-    flex: 1,
+    height: '50%',
+    width: '100%',
     backgroundColor: 'green',
   },
 });
 
 export default Activity;
+
+// 5Rjs에서 구현중
